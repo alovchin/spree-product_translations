@@ -13,7 +13,7 @@ module SpreeProductTranslations
       @@fallbacks_for_empty_translations = Spree::Config[:fallbacks_for_empty_translations] != '0' # Booelans are stored as an int as a string
 
       ::Product.class_eval do
-        translates :name, :description, :meta_description, :meta_keywords, :fallbacks_for_empty_translations => @@fallbacks_for_empty_translations
+        translates :name, :permalink, :description, :meta_description, :meta_keywords, :fallbacks_for_empty_translations => @@fallbacks_for_empty_translations
       end
 
       ::Property.class_eval do
