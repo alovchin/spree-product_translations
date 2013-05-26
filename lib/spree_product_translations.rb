@@ -29,7 +29,7 @@ module SpreeProductTranslations
       end
 
       ::Taxon.class_eval do
-        translates :name, :permalink, :description, :fallbacks_for_empty_translations => @@fallbacks_for_empty_translations
+        translates :name, :permalink, :description,:meta_description,:meta_keywords,:page_title, :fallbacks_for_empty_translations => @@fallbacks_for_empty_translations
       end
 
       ::OptionType.class_eval do
